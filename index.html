@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Monaco';
+            font-size: 20px;
+            margin: 0;
+            background-color: #84cdf4;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .left-section {
+            width: 48%; 
+            padding-right: 20px;
+        }
+        .right-section {
+            width: 48%;
+        }
+        table, th, td {
+            width: 100%;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .setVisibility input {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div style="background-color: #d8d1c9; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; text-align: center;">
+                <h2 style="margin-top: 0;">Inventory System</h2>
+
+            <form action="#" id="inputForm">
+                <p id="usersList"></p>
+                <p>Item: <input type="text" id="item"></p>
+                <p>Quantity: <input type="number" id="quantity"></p>
+                <input type="submit" value="Submit" id="submitButton">
+            </form>
+        </div>
+        </div>
+        <div class="right-section">
+            <div class="setVisibility">
+                <p>View table (Check the box)<input type="checkbox" id="checkbox"></p>
+            </div>
+            <div class="tablesSection" style="display: none; background-color: #d8d1c9;">
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <form id="editForm" style="display: none;">
+        <input type="text" id="newText"/>
+        <input type="submit">
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
